@@ -1,2 +1,2 @@
-# Javascript30 Template
-Single page website development environment with Prettier, ESLint, and airbnb formatting guidelines.
+# Flex Panels
+Full page flex panels with random images that grow and slide in additional text when clicked. Part of the javascript30 challenge.
