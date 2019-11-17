@@ -1,6 +1,92 @@
-.container {
-  width: auto;
+body {
+  margin: 0;
+  font-size: 10px;
+  text-align: center;
+  color: white;
+  font-family: 'helvetica';
+  font-weight: 200;
+}
+
+.panels {
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.panel {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  transition:
+    font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    background 0.2s;
+  background-size: cover;
+  background-position: center;
+}
+
+.panel>* {
+  margin: 0;
+  width: 100%;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s;
+  text-transform: uppercase;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2em;
+}
+
+.panel p:nth-child(2) {
+  font-size: 2em;
+}
+
+.panel p:first-child {
+  transform: translateY(-100%);
+}
+
+.panel.open-active p:first-child {
+  transform: translateY(0);
+}
+
+.panel p:last-child {
+  transform: translateY(100%);
+}
+
+.panel.open-active p:last-child {
+  transform: translateY(0);
+}
+
+.panel.open {
+  font-size: 20px;
+  flex: 3;
+}
+
+.panel1 {
+  background-image: url(https://source.unsplash.com/random/600x600);
+}
+
+.panel2 {
+  background-image: url(https://source.unsplash.com/random/500x600);
+}
+
+.panel3 {
+  background-image: url(https://source.unsplash.com/random/400x600);
+}
+
+.panel4 {
+  background-image: url(https://source.unsplash.com/random/300x600);
+}
+
+.panel5 {
+  background-image: url(https://source.unsplash.com/random/200x600);
+}
+
+@media only screen and (max-width: 600px) {
+  .panel p {
+    font-size: 1em;
+  }
 }
